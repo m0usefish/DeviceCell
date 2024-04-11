@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DeviceSell"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded" >
     <Grid>
-        
+        <DataGrid x:Name="CategoriesGrid" HorizontalAlignment="Left" Height="352" VerticalAlignment="Top" AutoGenerateColumns="False" Width="794" Margin="0,0,-0.4,0">
+            <DataGrid.Columns >
+                <DataGridTextColumn Header = "ID" Binding = "{Binding id}" Width="Auto"/>
+                <DataGridTextColumn Header = "Name" Binding = "{Binding name}" Width="Auto"/>
+
+            </DataGrid.Columns >
+        </DataGrid>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="10,369,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+
     </Grid>
 </Window>
